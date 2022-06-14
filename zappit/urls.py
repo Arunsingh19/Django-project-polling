@@ -19,10 +19,13 @@ from django.urls import path, include
 from posts import views
 
 urlpatterns = [
+    path('',views.PostList.as_view()),
     path('admin/', admin.site.urls),
-    path('api/posts',views.PostList.as_view()),
-    path('api/posts/<int:pk>',views.PostRetriveDestroy.as_view()),
-    path('api/posts/<int:pk>/vote',views.VoteCreate.as_view()),
+    # path('api/posts/',views.PostList.as_view()),
+    # path('api/posts/<int:pk>',views.PostRetriveDestroy.as_view()),
+    # path('api/posts/<int:pk>/vote',views.VoteCreate.as_view()),
+    path('<int:pk>',views.PostRetriveDestroy.as_view()),
+    path('<int:pk>/vote',views.VoteCreate.as_view()),
     path('api-auth/', include('rest_framework.urls'))
 ]
 
