@@ -5,7 +5,7 @@ import dj_database_url
 from zappit.settings.dev import SECRET_KEY
 from .common import *
 
-DEBUG = False
+# DEBUG = False
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
