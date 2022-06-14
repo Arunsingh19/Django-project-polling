@@ -6,7 +6,7 @@ SECRET_KEY = 'django-insecure-q^!iub^7m@a^w$+g2%5o!!o)sc3s=plu6j(4gl@6%a0@izc7tu
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'vote',
         'HOST': 'localhost',
         'USER': 'postgres',
